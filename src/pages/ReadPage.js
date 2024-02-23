@@ -1,12 +1,14 @@
 import { useWordGenerator } from "../hooks/useWordGenerator";
-import { Center, Container, Input, Text } from "@chakra-ui/react";
+import { Box, Center, Input, Text } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { Form } from "react-router-dom";
 
 export default function WatchPage() {
   const { getMorseWords } = useWordGenerator();
-  const words = useRef(getMorseWords(2, "\u00A0\u00A0", "\u00A0\u00A0\u00A0"));
+  const words = useRef(
+    getMorseWords(2, "\u00A0\u00A0", "\u00A0\u00A0\u00A0", 10, 10),
+  );
   const [userGuess, setUserGuess] = useState("");
 
   const checkGuess = () => {
@@ -24,8 +26,9 @@ export default function WatchPage() {
   };
 
   return (
-    <Container
+    <Box
       height="100%"
+      width="100%"
       display="flex"
       flexDir="column"
       justifyContent="center"
@@ -48,6 +51,6 @@ export default function WatchPage() {
           />
         </Form>
       </Center>
-    </Container>
+    </Box>
   );
 }

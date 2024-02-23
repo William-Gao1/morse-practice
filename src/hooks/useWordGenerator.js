@@ -10,7 +10,7 @@ export const useWordGenerator = () => {
     count,
     betweenChars = " ",
     betweenWords = "  ",
-    minLength = 0,
+    minLength = 7,
     maxLength = 1000,
   ) => {
     const plainText = getWords(count, minLength, maxLength);
