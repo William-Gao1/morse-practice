@@ -11,7 +11,7 @@ export const useWordGenerator = () => {
     betweenChars = " ",
     betweenWords = "  ",
     minLength = 0,
-    maxLength = 1000,
+    maxLength = 10,
   ) => {
     const plainText = getWords(count, minLength, maxLength);
     const encoded = morse
