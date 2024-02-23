@@ -7,7 +7,7 @@ import { Form } from "react-router-dom";
 export default function WatchPage() {
   const { getMorseWords } = useWordGenerator();
   const words = useRef(
-    getMorseWords(2, "\u00A0\u00A0", "\u00A0\u00A0\u00A0", 10, 10),
+    getMorseWords(2, "\u00A0\u00A0", "\u00A0\u00A0\u00A0", 0, 10),
   );
   const [userGuess, setUserGuess] = useState("");
 
