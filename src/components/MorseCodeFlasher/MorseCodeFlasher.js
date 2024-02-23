@@ -24,6 +24,7 @@ export const MorseCodeFlasher = ({ morseCode }) => {
     setIsFlashing(true);
     if (morseCode[index] === ".") {
       setIsFlashing(true);
+      waitingTime = dotInterval / 2;
     } else if (morseCode[index] === "-") {
       setIsFlashing(true);
       waitingTime = dotInterval * 2;

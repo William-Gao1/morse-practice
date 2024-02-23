@@ -1,3 +1,5 @@
+import MorseCodeHint from "../components/MorseCodeHint";
+
 export default function TapPage() {
-  return <p>Tap</p>;
+  return <MorseCodeHint />;
 }
